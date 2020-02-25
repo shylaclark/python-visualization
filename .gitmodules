@@ -1,0 +1,4 @@
+[submodule "tethys"]
+	path = tethys
+	url = git@github.com:tethysplatform/tethys.git
+	branch = release
