@@ -6,3 +6,4 @@ See wiki for installation and configuration instructions for:
 2. [Holoviz](https://github.com/shylaclark/python-visualization/wiki/Holoviz)
 3. [Panel](https://github.com/shylaclark/python-visualization/wiki/Panel)
 4. [Bokeh](https://github.com/shylaclark/python-visualization/wiki/Bokeh)
+5. [Jupyter](https://github.com/shylaclark/python-visualization/wiki/Jupyter)
