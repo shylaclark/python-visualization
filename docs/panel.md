@@ -4,7 +4,7 @@
 
 ## Getting Started
 
-#### Install
+### Install
 ```
 $ conda install -c pyviz panel
 ```
@@ -68,6 +68,12 @@ pn.Row(
     get_map
 ).servable()
 ```
+
+### Start the Jupyter Notebook server
+```
+jupyter notebook
+```
+See your notebooks at http://localhost:8888.
 
 ## Resources
 - https://github.com/holoviz/panel
