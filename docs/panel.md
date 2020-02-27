@@ -9,6 +9,17 @@
 $ conda install -c pyviz panel
 ```
 
+## Make a practice dashboard in Jupyter Notebook
+
+#### Install altair
+```
+conda install -c conda-forge altair_data_server
+```
+
+#### Install vega_datasets
+```
+conda install -c conda-forge vega_datasets vega
+```
 
 ## Resources
 - https://github.com/holoviz/panel
