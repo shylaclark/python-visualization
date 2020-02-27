@@ -2,6 +2,7 @@
 
 [Panel](https://panel.holoviz.org) is plotting-library-agnostic — it supports nearly all visualization libraries. 
 
+
 ## Getting Started
 
 ### Install Panel
@@ -9,7 +10,7 @@
 conda install -c pyviz panel
 ```
 
-### Make a dashboard in Jupyter Notebook
+### Make an example dashboard
 
 The following instructions are based on [this](https://panel.holoviz.org/gallery/simple/altair_choropleth.html#simple-gallery-altair-choropleth) example from the official HoloViz site.
 
