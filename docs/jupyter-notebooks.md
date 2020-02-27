@@ -1,10 +1,14 @@
 # Jupyter Notebooks
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 1c0096b61656f8511acaf5e7628d88e9e74a9a45
 ## Getting Started
 
 #### Install
 ```
+<<<<<<< HEAD
 $ conda install -c conda-forge notebook
 ```
 
@@ -19,3 +23,15 @@ Each notebook consists of a `.ipynb` file, which is written in JSON.
 
 ## Resources
 - https://jupyter.readthedocs.io/en/latest/running.html#running
+=======
+conda install -c conda-forge notebook
+```
+
+#### Run
+```
+jupyter notebook
+```
+
+## Resources
+- https://jupyter.org
+>>>>>>> 1c0096b61656f8511acaf5e7628d88e9e74a9a45
