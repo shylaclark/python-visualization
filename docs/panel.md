@@ -4,30 +4,26 @@
 
 ## Getting Started
 
-### Install
+### Install Panel
 ```
 $ conda install -c pyviz panel
 ```
 
-## Make a practice dashboard in Jupyter Notebook
+### Make a practice dashboard in Jupyter Notebook
 
 The following instructions are based on [this](https://panel.holoviz.org/gallery/simple/altair_choropleth.html#simple-gallery-altair-choropleth) example from the official HoloViz site.
 
-### In Terminal
-
-#### Install altair
+#### In Terminal install altair
 ```
 conda install -c conda-forge altair_data_server
 ```
 
-#### Install vega_datasets
+#### In Terminal install vega_datasets
 ```
 conda install -c conda-forge vega_datasets vega
 ```
 
-### In your Jupyter Notebook
-
-#### Add the following to a code cell
+#### In your Jupyter Notebook, add the following to a code cell
 It's a best-practice to put your import statements into their own code block in Jupyter Notebook.
 ```
 import altair as alt
