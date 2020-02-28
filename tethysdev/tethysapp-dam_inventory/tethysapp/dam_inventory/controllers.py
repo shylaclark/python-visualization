@@ -95,6 +95,22 @@ def add_dam(request):
     """
     Controller for the Add Dam page.
     """
+    add_button = Button(
+        display_text='Add',
+        name='add-button',
+        icon='glyphicon glyphicon-plus',
+        style='success'
+    )
 
-    context = {}
+    cancel_button = Button(
+        display_text='Cancel',
+        name='cancel-button',
+        href=reverse('dam_inventory:home')
+    )
+
+    context = {
+        'add_button': add_button,
+        'cancel_button': cancel_button,
+    }
+
     return render(request, 'dam_inventory/add_dam.html', context)
