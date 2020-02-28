@@ -4,13 +4,13 @@
 
 These steps are based on the docs.tethysplatform.org [Developer Installation](http://docs.tethysplatform.org/en/stable/installation/developer_installation.html#developer-installation) documentation.
 
-#### Install Tethys Development Server
+#### Install Tethys development server
 ```
 $ curl https://raw.githubusercontent.com/tethysplatform/tethys/release/scripts/install_tethys.sh -o ./install_tethys.sh
 $ bash install_tethys.sh -b release -t ~/Documents/Projects/python-visualization/.tethys/${CONDA_ENV_NAME}
 ```
 
-#### Or Install as Submodule
+#### Or install as a submodule
 ```
 $ git submodule add -b release git@github.com:tethysplatform/tethys.git tethys
 $ bash scripts/install_tethys.sh
@@ -59,10 +59,11 @@ Note: The .tethys project root directory is hidden.
     tethys
 ```
 
-## Create a new Tethys app
+## Create a New Tethys App
 
-#### Create a new app
 The following was adapted from http://docs.tethysplatform.org/en/latest/tutorials/key_concepts/new_app_project.html.
+
+#### Generate a new app
 ```
 t
 mkdir ~/tethysdev
@@ -70,18 +71,16 @@ cd ~/tethysdev
 tethys scaffold dam_inventory
 ```
 
-#### Install the app on your development Tethys Portal
+#### Install the app on your development server
 ```
 cd ~/tethysdev/tethysapp-dam_inventory
-tethys install -dt
+tethys install -d
 ```
 
 #### Run your new app
 ```
 tstart
 ```
-
-
 
 ## Troubleshooting
 
