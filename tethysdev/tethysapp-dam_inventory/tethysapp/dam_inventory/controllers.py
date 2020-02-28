@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from tethys_sdk.permissions import login_required
-from tethys_sdk.gizmos import Button
+from tethys_sdk.gizmos import MapView, Button
 
 @login_required()
 def home(request):
@@ -63,12 +63,28 @@ def home(request):
         }
     )
 
+    dam_inventory_map = MapView(
+        height='100%',
+        width='100%',
+        layers=[],
+        basemap='OpenStreetMap',
+    )
+
+    add_dam_button = Button(
+        display_text='Add Dam',
+        name='add-dam-button',
+        icon='glyphicon glyphicon-plus',
+        style='success'
+    )
+
     context = {
         'save_button': save_button,
         'edit_button': edit_button,
         'remove_button': remove_button,
         'previous_button': previous_button,
-        'next_button': next_button
+        'next_button': next_button,
+        'dam_inventory_map': dam_inventory_map,
+        'add_dam_button': add_dam_button
     }
 
     return render(request, 'dam_inventory/home.html', context)
