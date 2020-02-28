@@ -61,16 +61,42 @@ Note: The .tethys project root directory is hidden.
     tethys
 ```
 
+## Create a new Tethys app
+
+#### Create a new app
+The following was adapted from http://docs.tethysplatform.org/en/latest/tutorials/key_concepts/new_app_project.html.
+```
+t
+mkdir ~/tethysdev
+cd ~/tethysdev
+tethys scaffold dam_inventory
+```
+
+#### Install the app on your development Tethys Portal
+```
+cd ~/tethysdev/tethysapp-dam_inventory
+tethys install -dt
+```
+
+#### Run your new app
+```
+tstart
+```
+
+
+
+## Troubleshooting
+
 #### Log
 `.tethys/tethys-dev/psql/logfile`
 
-## Remove Tethys
+#### Remove Tethys
 ```
 $ rm -rf /path/to/.tethys
 $ rm -rf /Users/me/miniconda/envs/tethys-dev
 ```
 
-## Troubleshooting
+#### PostgreSQL
 I have another instance of PostgreSQL running on my machine ($ brew services) listening to port 5432 for Metalnx.
 
 I needed to update the /Users/me/.tethys/tethys-dev/psql/data/:
