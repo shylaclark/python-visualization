@@ -97,3 +97,5 @@ pg_ctl -D '/Users/me/.tethys/tethys-dev/psql/data' -l logfile restart
 - http://www.tethysplatform.org/
 - http://docs.tethysplatform.org/en/stable/installation/developer_installation.html#developer-installation
 - https://www.vogella.com/tutorials/GitSubmodules/article.html
+- [Example Tethys dashboard](http://tethys.icimod.org/apps/)
+
