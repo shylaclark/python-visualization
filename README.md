@@ -7,3 +7,8 @@ See docs/ for installation and configuration instructions for:
 3. [Panel](https://github.com/shylaclark/python-visualization/blob/master/docs/panel.md)
 4. [Bokeh](https://github.com/shylaclark/python-visualization/blob/master/docs/bokeh.md)
 5. [Jupyter Notebooks](https://github.com/shylaclark/python-visualization/blob/master/docs/jupyter-notebooks.md)
+
+
+## Resources
+- https://pyviz.org
+- https://holoviz.org
