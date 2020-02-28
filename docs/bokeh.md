@@ -5,11 +5,10 @@
 
 #### Install
 ```
-$ conda install bokeh
+conda install bokeh
 ```
 
 #### Run
-To start the Bokeh server and set up event handlers with .on_change or .on_click:
 ```
 bokeh serve
 ```
