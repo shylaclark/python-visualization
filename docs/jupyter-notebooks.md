@@ -20,3 +20,4 @@ Each notebook consists of a `.ipynb` file, which is written in JSON.
 ## Resources
 - https://jupyter.org
 - https://jupyter.readthedocs.io/en/latest/running.html#running
+- https://blog.dominodatalab.com/lesser-known-ways-of-using-notebooks/
