@@ -4,7 +4,7 @@
 
 These steps are based on the docs.tethysplatform.org [Developer Installation](http://docs.tethysplatform.org/en/stable/installation/developer_installation.html#developer-installation) documentation.
 
-#### Install
+#### Install Tethys Development Server
 ```
 $ curl https://raw.githubusercontent.com/tethysplatform/tethys/release/scripts/install_tethys.sh -o ./install_tethys.sh
 $ bash install_tethys.sh -b release -t ~/Documents/Projects/python-visualization/.tethys/${CONDA_ENV_NAME}
@@ -26,11 +26,9 @@ $ . ~/.bash_profile
 $ t
 $ tethys manage start
 ```
+You should now be able to access an example Tethys Portal at http://127.0.0.1:8000.
 
-#### Access client
-http://127.0.0.1:8000
-
-#### Login
+Login
 - User: admin
 - Password: pass
 
