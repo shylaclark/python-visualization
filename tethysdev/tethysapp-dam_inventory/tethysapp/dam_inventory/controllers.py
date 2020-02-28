@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, reverse
 from tethys_sdk.permissions import login_required
 from tethys_sdk.gizmos import MapView, Button
 
@@ -74,7 +74,8 @@ def home(request):
         display_text='Add Dam',
         name='add-dam-button',
         icon='glyphicon glyphicon-plus',
-        style='success'
+        style='success',
+        href=reverse('dam_inventory:add_dam')
     )
 
     context = {
@@ -88,3 +89,12 @@ def home(request):
     }
 
     return render(request, 'dam_inventory/home.html', context)
+
+@login_required()
+def add_dam(request):
+    """
+    Controller for the Add Dam page.
+    """
+
+    context = {}
+    return render(request, 'dam_inventory/add_dam.html', context)
