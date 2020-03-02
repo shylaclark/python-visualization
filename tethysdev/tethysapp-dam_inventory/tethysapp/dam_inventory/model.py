@@ -2,14 +2,18 @@ import os
 import uuid
 import json
 
-def add_new_dam(db_directory, name, owner, river, date_built):
+def add_new_dam(db_directory, location, name, owner, river, date_built):
     """
     Persist new dam.
     """
+    # Convert GeoJSON to Python dictionary
+    location_dict = json.loads(location)
+
     # Serialize the data to JSON
     new_dam_id = uuid.uuid4()
     dam_dict = {
         'id': str(new_dam_id),
+        'location': location_dict['geometries'][0],
         'name': name,
         'owner': owner,
         'river': river,
@@ -56,4 +60,3 @@ def get_all_dams(db_directory):
             dams.append(dam_dict)
 
     return dams
-    
