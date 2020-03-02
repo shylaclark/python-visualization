@@ -2,6 +2,8 @@ from django.shortcuts import render, reverse, redirect
 from django.contrib import messages
 from tethys_sdk.permissions import login_required
 from tethys_sdk.gizmos import MapView, Button, TextInput, DatePicker, SelectInput
+from tethys_sdk.workspaces import app_workspace
+from .model import add_new_dam
 
 @login_required()
 def home(request):
@@ -91,8 +93,9 @@ def home(request):
 
     return render(request, 'dam_inventory/home.html', context)
 
+@app_workspace
 @login_required()
-def add_dam(request):
+def add_dam(request, app_workspace):
     """
     Controller for the Add Dam page.
     """
@@ -136,7 +139,7 @@ def add_dam(request):
             date_error = 'Date Built is required.'
 
         if not has_errors:
-            # Do stuff here
+            add_new_dam(db_directory=app_workspace.path, name=name, owner=owner, river=river, date_built=date_built)
             return redirect(reverse('dam_inventory:home'))
 
         messages.error(request, "Please fix errors.")
