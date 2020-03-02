@@ -1,9 +1,9 @@
 from django.shortcuts import render, reverse, redirect
 from django.contrib import messages
 from tethys_sdk.permissions import login_required
-from tethys_sdk.gizmos import MapView, Button, TextInput, DatePicker, SelectInput
+from tethys_sdk.gizmos import MapView, Button, TextInput, DatePicker, SelectInput, DataTableView
 from tethys_sdk.workspaces import app_workspace
-from .model import add_new_dam
+from .model import add_new_dam, get_all_dams
 
 @login_required()
 def home(request):
@@ -205,3 +205,34 @@ def add_dam(request, app_workspace):
     }
 
     return render(request, 'dam_inventory/add_dam.html', context)
+
+@app_workspace
+@login_required()
+def list_dams(request, app_workspace):
+    """
+    Show all dams in a table view.
+    """
+    dams = get_all_dams(app_workspace.path)
+    table_rows = []
+
+    for dam in dams:
+        table_rows.append(
+            (
+                dam['name'], dam['owner'],
+                dam['river'], dam['date_built']
+            )
+        )
+    
+    dams_table = DataTableView(
+        column_names=('Name', 'Owner', 'River', 'Date Built'),
+        rows=table_rows,
+        searching=False,
+        orderClasses=False,
+        lengthMenu=[ [10, 25, 50, -1], [10, 25, 50, "All"] ],
+    )
+
+    context = {
+        'dams_table': dams_table
+    }
+
+    return render(request, 'dam_inventory/list_dams.html', context)

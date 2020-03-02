@@ -48,6 +48,11 @@ class DamInventory(TethysAppBase):
                 url='dam-inventory/dams/add',
                 controller='dam_inventory.controllers.add_dam'
             ),
+            UrlMap(
+                name='dams',
+                url='dam-inventory/dams',
+                controller='dam_inventory.controllers.list_dams'
+            ),
         )
 
         return url_maps
