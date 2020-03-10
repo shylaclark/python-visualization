@@ -1,1 +1,8 @@
-This folder contains developer notes.
+
+
+# python-visualization wiki
+
+
+## To deploy
+[http://127.0.0.1:8002](http://127.0.0.1:8002)
+

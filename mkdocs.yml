@@ -1,5 +1,11 @@
 site_name: Practice Python project using Tethys, Panel, and Bokeh.
 dev_addr: '127.0.0.1:8002'
 
-theme:
-  name: mkdocs
+nav:
+  - Home: 'README.md'
+  - Jupyter Notebooks: 'jupyter-notebooks.md'
+  - Bokeh: 'bokeh.md'
+  - Panel: 'panel.md'
+  - HoloViz: 'holoviz.md'
+  - Param: 'param.md'
+  - Tethys: 'tethys.md'
