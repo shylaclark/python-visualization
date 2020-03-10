@@ -1,0 +1,5 @@
+site_name: Practice Python project using Tethys, Panel, and Bokeh.
+dev_addr: '127.0.0.1:8002'
+
+theme:
+  name: mkdocs
