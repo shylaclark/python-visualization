@@ -9,3 +9,6 @@
 - [Jupyter Docs: Custom JS](https://jupyter-notebook.readthedocs.io/en/stable/examples/Notebook/JavaScript%20Notebook%20Extensions.html#Injecting-JS)
 - [iPython Kernel and JS Example](https://gist.github.com/sanbor/e9c8b57c5759d1ff382a)
 - https://jakevdp.github.io/blog/2013/06/01/ipython-notebook-javascript-python-communication/
+- https://healeycodes.com/javascript/python/beginners/webdev/2019/04/11/talking-between-languages.html
+
+> Note: iPython Notebooks are now referred to as Jupyter Notebooks. The jake link is from 2013.
