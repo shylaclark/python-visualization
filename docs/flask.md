@@ -23,3 +23,6 @@ flask run
 ```
 
 Running on http://127.0.0.1:5000/
+
+## Resources:
+- https://blog.sneawo.com/blog/2017/06/27/how-to-use-jupyter-notebooks-with-flask-app/
