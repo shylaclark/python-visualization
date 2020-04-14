@@ -1,0 +1,651 @@
+<JobInputs featureSet="9.02">
+  <ComponentList>
+    <Component>SimulationControl</Component>
+    <Component>Reference</Component>
+    <Component>OutputControl</Component>
+    <Component>AdvancedSimulation</Component>
+    <Component>MeshManager</Component>
+    <Component>InputManager</Component>
+    <Component>MeshMove</Component>
+    <Component>MELODI</Component>
+    <Component>MoveSentinel</Component>
+    <Component>OSCAR</Component>
+    <Component>PUNDIT</Component>
+    <Component>SAMCart</Component>
+    <Component>MSTRAND</Component>
+    <Component>SolveSentinel</Component>
+    <Component>ForcesMomentsCalc</Component>
+    <Component>ExceptionManager</Component>
+    <Component>OutputManager</Component>
+    <Component>TrackFileWriter</Component>
+    <Component>COVIZ</Component>
+    <Component>CovizControl</Component>
+    <Component>OutputSentinel</Component>
+    <Component>ConvergeSol</Component>
+    <Component>TimeManager</Component>
+  </ComponentList>
+  <InputList>
+    <ComponentInputs component="SimulationControl">
+      <Input name="Description">generic main rotor tail rotor fuselage configuration</Input>
+      <Input name="Dpsi">0.25</Input>
+      <Input name="EnableFluidGravity">No</Input>
+      <Input name="GridUnits">Inches</Input>
+      <Input name="Iterations">28800</Input>
+      <Input name="JobDirectory">./</Input>
+      <Input name="JobName">mtrobin</Input>
+      <Input name="MeshRefLength">0.0254</Input>
+      <Input name="MovingMeshFrame">Inertial</Input>
+      <Input name="NbeEqnSet">sa-rans</Input>
+      <Input name="NbeSAType">Standard</Input>
+      <Input name="NbeTransModel">None</Input>
+      <Input name="NbeTurbForm">RANS</Input>
+      <Input name="NbeTurbModel">SA</Input>
+      <Input name="NbeViscous">Navier-Stokes</Input>
+      <Input name="ObeTransModel">None</Input>
+      <Input name="ObeTransModelSwitch">No</Input>
+      <Input name="ObeTurbForm">RANS</Input>
+      <Input name="ObeTurbModel">SA</Input>
+      <Input name="ObeTurbModelSwitch">Yes</Input>
+      <Input name="ObeViscous">Navier-Stokes</Input>
+      <Input name="PostProcFormat">FIELDVIEW</Input>
+      <Input name="PreFlight">False</Input>
+      <Input name="Restart">No</Input>
+      <Input name="RestartDirectory" />
+      <Input name="RestartFrequency">360</Input>
+      <Input name="RestartKeepOld">2</Input>
+      <Input name="RestartScrubber">on</Input>
+      <Input name="RestartStep">-1</Input>
+      <Input name="SubIterations">0</Input>
+      <Input name="TimeAccu">Unsteady</Input>
+      <Input name="TimeStep">0.000145444104333</Input>
+      <Input name="TimeStepDef">Dpsi-Deg</Input>
+    </ComponentInputs>
+    <ComponentInputs component="Reference">
+      <Input name="Alpha">0.0</Input>
+      <Input name="Altitude">0</Input>
+      <Input name="Beta">0.0</Input>
+      <Input name="FreestreamMach">0</Input>
+      <Input name="Gamma">-1.0</Input>
+      <Input name="GasConstant">-1</Input>
+      <Input name="Gravity">-1.0</Input>
+      <Input name="KnownReferenceCond">Alt-Mach</Input>
+      <Input name="Mach">0.591162385293</Input>
+      <Input name="OmegaUnit">rad/s</Input>
+      <Input name="Prandtl">-1.0</Input>
+      <Input name="RCCLabel" />
+      <Input name="RefAxis">Freestream</Input>
+      <Input name="RefOmega">30</Input>
+      <Input name="RefRotorRadius">6.7056</Input>
+      <Input name="ReferenceArea">1.0</Input>
+      <Input name="ReferenceLength">1.0</Input>
+      <Input name="ReferenceMach">From Rotor</Input>
+      <Input name="ReynoldsLength">1.0</Input>
+      <Input name="TurbIntensity">0.08165</Input>
+      <Input name="TurbVis">3.0</Input>
+      <Input name="Viscosity">1.78938027808e-05</Input>
+      <Input name="WindX">0.0</Input>
+      <Input name="WindY">0.0</Input>
+      <Input name="WindZ">0.0</Input>
+    </ComponentInputs>
+    <ComponentInputs component="OutputControl">
+      <Input name="FlowSolutionFileFormat">FIELDVIEW</Input>
+      <Input name="FlowSolutionFileType">Volume</Input>
+      <Input name="OutputCoordinateSystem">Default Scheme</Input>
+      <Input name="TimeAveragingStart">-1.0</Input>
+      <Input name="TimeAveragingVizFileContent">|w| or vorticity magnitude</Input>
+      <Input name="TimeAveragingWriteFrequency">0</Input>
+      <Input name="TrackForces">Total+Split</Input>
+      <Input name="UseOutputControl">No</Input>
+      <Input name="VisualizationFileContent">|w| or vorticity magnitude</Input>
+      <Input name="VisualizationFrequency">0</Input>
+      <Input name="VisualizationReferenceFrame">&lt;Inertial&gt;</Input>
+    </ComponentInputs>
+    <ComponentInputs component="AdvancedSimulation">
+      <Input name="UseExistingMelodiXML">True</Input>
+    </ComponentInputs>
+    <ComponentInputs component="PUNDIT">
+      <Input name="CompositeBody">&lt;None&gt;</Input>
+      <Input name="CompositeBodyDominance">True</Input>
+      <Input name="CompositeBodyGroup">1</Input>
+      <Input name="CompositeProjectionThreshold">2.0e-3</Input>
+      <Input name="CutHole">3</Input>
+      <Input name="IAlgo">0</Input>
+      <Input name="InternalWallBody">&lt;None&gt;</Input>
+      <Input name="InternalWallDir">X</Input>
+      <Input name="IterLoadBalStart">-1</Input>
+      <Input name="MExclude">4</Input>
+      <Input name="MFringe">2</Input>
+      <Input name="MFringeHole">-1000</Input>
+      <Input name="Ofac">1000.</Input>
+      <Input name="OffBodyFringe">-1</Input>
+      <Input name="OpenBody">&lt;None&gt;</Input>
+      <Input name="OpenBodyNormal">X-Positive</Input>
+      <Input name="PUNDITInterpClipping">1</Input>
+      <Input name="PUNDITInterpScheme">LSQ1</Input>
+      <Input name="PUNDITWallDistance">False</Input>
+    </ComponentInputs>
+    <ComponentInputs component="SAMCart">
+      <Input name="AdaptFreq">10</Input>
+      <Input name="Adaptation">Dynamic</Input>
+      <Input name="AdpLimitXHigh">21</Input>
+      <Input name="AdpLimitXLow">-14</Input>
+      <Input name="AdpLimitYHigh">21</Input>
+      <Input name="AdpLimitYLow">-14</Input>
+      <Input name="AdpLimitZHigh">21</Input>
+      <Input name="AdpLimitZLow">-14</Input>
+      <Input name="AutoCompute">Yes</Input>
+      <Input name="CartCellsX">30</Input>
+      <Input name="CartCellsY">30</Input>
+      <Input name="CartCellsZ">30</Input>
+      <Input name="CartDomainXHigh">1500.0</Input>
+      <Input name="CartDomainXLow">-1500.0</Input>
+      <Input name="CartDomainYHigh">1500.0</Input>
+      <Input name="CartDomainYLow">-1500.0</Input>
+      <Input name="CartDomainZHigh">1500.0</Input>
+      <Input name="CartDomainZLow">-1500.0</Input>
+      <Input name="CoarseDX">100.0</Input>
+      <Input name="DxFine">0.681641</Input>
+      <Input name="FixedRefine">No</Input>
+      <Input name="GeometryRefine">Yes</Input>
+      <Input name="HighXBC">Freestream</Input>
+      <Input name="HighYBC">Freestream</Input>
+      <Input name="HighZBC">Freestream</Input>
+      <Input name="IBlankCheck">Yes</Input>
+      <Input name="IGBPScaleFac">1.0</Input>
+      <Input name="ImpSolType">Local</Input>
+      <Input name="InvisDiscret">5th order central</Input>
+      <Input name="LargestBlock">50</Input>
+      <Input name="Level0HighX">1.0</Input>
+      <Input name="Level0HighY">1.0</Input>
+      <Input name="Level0HighZ">1.0</Input>
+      <Input name="Level0LowX">-1.0</Input>
+      <Input name="Level0LowY">-1.0</Input>
+      <Input name="Level0LowZ">-1.0</Input>
+      <Input name="LimitAdapt">No</Input>
+      <Input name="LowXBC">Freestream</Input>
+      <Input name="LowYBC">Freestream</Input>
+      <Input name="LowZBC">Freestream</Input>
+      <Input name="MaxGeometryLevels">15</Input>
+      <Input name="MaxOrphans">1000</Input>
+      <Input name="MaxPtPerProc">2000000</Input>
+      <Input name="NSweeps">0</Input>
+      <Input name="NestBuffer">4</Input>
+      <Input name="ObeSolver">Implicit</Input>
+      <Input name="ObeSubSteps">10</Input>
+      <Input name="ObeSyncBoundaryNodes">No</Input>
+      <Input name="OffBodyCFL">1.0</Input>
+      <Input name="OrphanAvg">Yes</Input>
+      <Input name="OrphanOutput">No</Input>
+      <Input name="OutputDelq">No</Input>
+      <Input name="OutputFringe">No</Input>
+      <Input name="RefLevel">15</Input>
+      <Input name="RefLevelExtra">1</Input>
+      <Input name="RefineLevels">Yes</Input>
+      <Input name="SmallestBlock">8</Input>
+      <Input name="SolnAdapt">Yes</Input>
+      <Input name="SolnAdaptStart">1440</Input>
+      <Input name="SolnTagMethod">GAMR</Input>
+      <Input name="SolnThreshold">1.0</Input>
+      <Input name="UseFinestIGBP">Yes</Input>
+      <Input name="VariableTimeStep">No</Input>
+      <Input name="ViscousDiscret">4th order</Input>
+    </ComponentInputs>
+    <ComponentInputs component="MSTRAND">
+      <Input name="SCFLInit">200.0</Input>
+      <Input name="SCFLMax">200.0</Input>
+      <Input name="SCFLMin">200.0</Input>
+      <Input name="SCFLRamp">0.0</Input>
+      <Input name="SGSSweep">5</Input>
+      <Input name="SGmresIter">20</Input>
+      <Input name="SGmresVec">20</Input>
+      <Input name="SGradient">Weighted Least-Squares</Input>
+      <Input name="SILUFill">1</Input>
+      <Input name="SLMPreconditioner">No</Input>
+      <Input name="SLimiter">Van Albada</Input>
+      <Input name="SLinSolver">GMRES</Input>
+      <Input name="SLinTol">0.1</Input>
+      <Input name="SMVP">Finite Difference</Input>
+      <Input name="SNTSubSteps">0</Input>
+      <Input name="SNTTSubSteps">0</Input>
+      <Input name="SPreconditioner">Gauss-Seidel</Input>
+      <Input name="SRelaxStep">30</Input>
+      <Input name="SSetTolerance">No</Input>
+      <Input name="STMCoupling">Default</Input>
+      <Input name="STTMCoupling">Default</Input>
+      <Input name="STimeInt">BDF2</Input>
+      <Input name="STol">0.0</Input>
+      <Input name="SVolScale">0.0</Input>
+      <Input name="UseOscar">Yes</Input>
+      <Input name="mStrandSubstep">5</Input>
+    </ComponentInputs>
+    <ComponentInputs component="CovizControl">
+      <Input name="CPFreq">50</Input>
+      <Input name="CPLimit">No</Input>
+      <Input name="CPLimitCenter">0.,0.,0.</Input>
+      <Input name="CPLimitRadius">1</Input>
+      <Input name="CPNormal">1.,0.,0.</Input>
+      <Input name="CPOrigin">0,0,0</Input>
+      <Input name="CPOut">slice</Input>
+      <Input name="CVCartResampleExtractOutputVariables">Density</Input>
+      <Input name="CartResampleExtractAverageFrequency">100</Input>
+      <Input name="CartResampleExtractEnabled">Disabled</Input>
+      <Input name="CartResampleExtractFormat">Image (pvti)</Input>
+      <Input name="CartResampleExtractFrequency">10</Input>
+      <Input name="CartResampleExtractMax">1.0,1.0,1.0</Input>
+      <Input name="CartResampleExtractMin">0.0,0.0,0.0</Input>
+      <Input name="CartResampleExtractN">10,10,10</Input>
+      <Input name="CartResampleTimeAverage">No</Input>
+      <Input name="CartResampleTimeAverageStart">0</Input>
+      <Input name="ComputeTemperature">No</Input>
+      <Input name="CoordPlane">X</Input>
+      <Input name="CovizFormat">Aggregated Vtk</Input>
+      <Input name="CuttingPlane">No</Input>
+      <Input name="IsoFreq">60</Input>
+      <Input name="IsoFunction">|w| or vorticity magnitude (Non-dimensional)</Input>
+      <Input name="IsoOut">contour</Input>
+      <Input name="IsoSurf">Yes</Input>
+      <Input name="IsoValue">0.005</Input>
+      <Input name="Offset">0</Input>
+      <Input name="ParticleRakeCloud">0,0,0</Input>
+      <Input name="ParticleRakeFreq">50</Input>
+      <Input name="ParticleRakeLinePoint1">0,0,0</Input>
+      <Input name="ParticleRakeLinePoint2">0,0,0</Input>
+      <Input name="ParticleRakeNumSeeds">0</Input>
+      <Input name="ParticleRakeOut">particletrack</Input>
+      <Input name="ParticleRakePoint">0,0,0</Input>
+      <Input name="ParticleRakeRadius">0</Input>
+      <Input name="ParticleRakeReinjectFreq">0</Input>
+      <Input name="ParticleRakeType">Line</Input>
+      <Input name="ParticleTrack">No</Input>
+      <Input name="RakeCloud">0,0,0</Input>
+      <Input name="RakeFreq">50</Input>
+      <Input name="RakeLinePoint1">0,0,0</Input>
+      <Input name="RakeLinePoint2">0,0,0</Input>
+      <Input name="RakeNumSeeds">1</Input>
+      <Input name="RakeOut">stream</Input>
+      <Input name="RakePoint">0,0,0</Input>
+      <Input name="RakeRadius">0</Input>
+      <Input name="RakeType">Line</Input>
+      <Input name="StartCoviz">50</Input>
+      <Input name="StreamLine">No</Input>
+      <Input name="SurfFreq">50</Input>
+      <Input name="TapFileName">mtrobin.tap</Input>
+      <Input name="TapFreq">50</Input>
+      <Input name="Taps">No</Input>
+      <Input name="UseCoviz">Yes</Input>
+      <Input name="VolumetricGrid">No</Input>
+      <Input name="VolumetricGridFreq">50</Input>
+      <Input name="VolumetricGridOut">volumetricgrid</Input>
+      <Input name="VolumetricGridType">both</Input>
+      <Input name="WriteGroupSize">36</Input>
+    </ComponentInputs>
+    <ComponentInputs component="ConvergeSol">
+      <Input name="BlockCustom">Isolated Rotor (revs=2)</Input>
+      <Input name="BlockSize">2</Input>
+      <Input name="ConvergenceBody">&lt;None&gt;</Input>
+      <Input name="csConvSol">No</Input>
+      <Input name="csCriteria">FM</Input>
+      <Input name="csFactor">0.2</Input>
+      <Input name="csFreq">90</Input>
+    </ComponentInputs>
+  </InputList>
+  <BodyHierarchy>
+    <SimulationScale>1.0</SimulationScale>
+    <SimulationUnits>SI</SimulationUnits>
+    <UseCartesianOffBody>Yes</UseCartesianOffBody>
+    <ReferenceRotor>MainRotor</ReferenceRotor>
+    <AirVelocityType>None</AirVelocityType>
+    <AirVelocityVector>0,0,0</AirVelocityVector>
+    <FixedFrameType>None</FixedFrameType>
+    <FixedFrame>&lt;None&gt;</FixedFrame>
+    <SmoothMotion>Yes</SmoothMotion>
+    <SmoothDeformation>Yes</SmoothDeformation>
+    <DefinitionList>
+      <NearBodyDefinition def="robin" defInp="Yes" meshType="Surface" nBESolver="mStrand">
+        <CenterOfMass>0.0,0.0,0.0</CenterOfMass>
+        <MeshTrim>No</MeshTrim>
+        <WallDistance>1.0</WallDistance>
+        <OuterBound>0.0</OuterBound>
+        <NLayer>51</NLayer>
+        <WallSpace>0.0</WallSpace>
+        <WakeSpace>0.0</WakeSpace>
+        <SurfSpacing>0.0</SurfSpacing>
+        <Mesh name="" type="mStrand">
+          <Path>/p/home/rhaehnel/cpe/mtrobin_hv10/robin.vtk</Path>
+          <MeshMeta>
+            <ReferenceArea>1.0</ReferenceArea>
+            <ReferenceLength>1.0,1.0,1.0</ReferenceLength>
+            <ReferencePoint>0.0,0.0,0.0</ReferencePoint>
+            <Scale>1.0</Scale>
+          </MeshMeta>
+        </Mesh>
+      </NearBodyDefinition>
+      <NearBodyDefinition def="s76blade-srf" defInp="Yes" meshType="Surface" nBESolver="mStrand">
+        <CenterOfMass>0.0,0.0,0.0</CenterOfMass>
+        <MeshTrim>No</MeshTrim>
+        <WallDistance>1.0</WallDistance>
+        <OuterBound>0.0</OuterBound>
+        <NLayer>51</NLayer>
+        <WallSpace>0.0</WallSpace>
+        <WakeSpace>0.0</WakeSpace>
+        <SurfSpacing>0.0</SurfSpacing>
+        <Mesh name="" type="mStrand">
+          <Path>/p/home/rhaehnel/cpe/mtrobin_hv10/s76blade-srf.vtk</Path>
+          <MeshMeta>
+            <ReferenceArea>1.0</ReferenceArea>
+            <ReferenceLength>1.0,1.0,1.0</ReferenceLength>
+            <ReferencePoint>0.0,0.0,0.0</ReferencePoint>
+            <Scale>1.0</Scale>
+          </MeshMeta>
+        </Mesh>
+      </NearBodyDefinition>
+      <NearBodyDefinition def="tail" defInp="Yes" meshType="Surface" nBESolver="mStrand">
+        <CenterOfMass>0.0,0.0,0.0</CenterOfMass>
+        <MeshTrim>No</MeshTrim>
+        <WallDistance>1.0</WallDistance>
+        <OuterBound>0.0</OuterBound>
+        <NLayer>51</NLayer>
+        <WallSpace>0.0</WallSpace>
+        <WakeSpace>0.0</WakeSpace>
+        <SurfSpacing>0.0</SurfSpacing>
+        <Mesh name="" type="mStrand">
+          <Path>/p/home/rhaehnel/cpe/mtrobin_hv10/tail.vtk</Path>
+          <MeshMeta>
+            <ReferenceArea>1.0</ReferenceArea>
+            <ReferenceLength>1.0,1.0,1.0</ReferenceLength>
+            <ReferencePoint>0.0,0.0,0.0</ReferencePoint>
+            <Scale>1.0</Scale>
+          </MeshMeta>
+        </Mesh>
+      </NearBodyDefinition>
+      <MeshlessFrameDefinition coordinateSystem="xByRzU" def="Meshless">
+        <ReferencePoint>0.0,0.0,0.0</ReferencePoint>
+        <CenterOfMass>0.0,0.0,0.0</CenterOfMass>
+      </MeshlessFrameDefinition>
+    </DefinitionList>
+    <BodyList>
+      <Body def="Meshless" name="MainRotor" rotationDirection="ccw" type="Rotor">
+        <ReferenceRotor>Yes</ReferenceRotor>
+        <MFDefineTransformFromFrame>CFDframe</MFDefineTransformFromFrame>
+        <ReferenceArea>141.261938</ReferenceArea>
+        <RotorRadius>6.705600</RotorRadius>
+        <MotionInputs enable="true" expressedin="child" type="One DOF Rotation - Rate">
+          <DefType>None</DefType>
+          <CSDCoupling>None</CSDCoupling>
+          <CSDObject>MainRotor</CSDObject>
+          <RotationRate>30.0</RotationRate>
+          <RateUnit>rad/s</RateUnit>
+          <MotionAxis>0,0,1</MotionAxis>
+          <MotionCenter>0.0,0.0,0.0</MotionCenter>
+          <TranslationRate>0.0</TranslationRate>
+        </MotionInputs>
+        <BodyList>
+          <Body bodyType="Blade" def="s76blade-srf" name="mblade1" type="Mesh">
+            <FSIFrame>mblade1_MF</FSIFrame>
+            <DefineBodyFrame>Yes</DefineBodyFrame>
+            <MFDefineTransformFromFrame>MainRotor</MFDefineTransformFromFrame>
+            <BFDefineTransformFromFrame>mblade1</BFDefineTransformFromFrame>
+            <BFDefineTransformFromType>Mesh Frame</BFDefineTransformFromType>
+            <Body2GridsQuery>No</Body2GridsQuery>
+            <Body2GridsMap>1</Body2GridsMap>
+            <TransformList>
+              <CompoundTransform centerOfRotation="0,0,0" rotationAngle="{rotAngle}" rotationAxis="X" rotationAxisVector="1,0,0" type="Rotate" />
+            </TransformList>
+            <MotionInputs changeFSIFrame="yes" enable="true" expressedin="child" type="None">
+              <DefType>None</DefType>
+              <CSDCoupling>None</CSDCoupling>
+              <CSDObject>None</CSDObject>
+              <RotationRate>0.0</RotationRate>
+              <RateUnit>rad/s</RateUnit>
+              <MotionAxis>0.0,0.0,1.0</MotionAxis>
+              <MotionCenter>0.0,0.0,0.0</MotionCenter>
+              <TranslationRate>0.0</TranslationRate>
+            </MotionInputs>
+            <BladeProperties hubAxis="0.0,0.0,1.0" spanAxis="1.0,0.0,0.0">
+              <ChordF>/p/home/rhaehnel/cpe/mtrobin_hv10/melodi/inputs/Chord_s76blade-srf.dat</ChordF>
+              <TwistF>/p/home/rhaehnel/cpe/mtrobin_hv10/melodi/inputs/Twist_s76blade-srf.dat</TwistF>
+              <QCF>/p/home/rhaehnel/cpe/mtrobin_hv10/melodi/inputs/QC_s76blade-srf.dat</QCF>
+            </BladeProperties>
+          </Body>
+          <Body bodyType="Blade" def="s76blade-srf" name="mblade2" type="Mesh">
+            <FSIFrame>mblade2_MF</FSIFrame>
+            <DefineBodyFrame>Yes</DefineBodyFrame>
+            <MFDefineTransformFromFrame>MainRotor</MFDefineTransformFromFrame>
+            <BFDefineTransformFromFrame>mblade2</BFDefineTransformFromFrame>
+            <BFDefineTransformFromType>Mesh Frame</BFDefineTransformFromType>
+            <Body2GridsQuery>No</Body2GridsQuery>
+            <Body2GridsMap>1</Body2GridsMap>
+            <TransformList>
+              <CompoundTransform centerOfRotation="0,0,0" rotationAngle="{rotAngle}" rotationAxis="X" rotationAxisVector="1,0,0" type="Rotate" />
+              <CompoundTransform centerOfRotation="0,0,0" rotationAngle="90" rotationAxis="Z" rotationAxisVector="0,0,1" type="Rotate" />
+            </TransformList>
+            <MotionInputs changeFSIFrame="yes" enable="true" expressedin="child" type="None">
+              <DefType>None</DefType>
+              <CSDCoupling>None</CSDCoupling>
+              <CSDObject>None</CSDObject>
+              <RotationRate>0.0</RotationRate>
+              <RateUnit>rad/s</RateUnit>
+              <MotionAxis>0.0,0.0,1.0</MotionAxis>
+              <MotionCenter>0.0,0.0,0.0</MotionCenter>
+              <TranslationRate>0.0</TranslationRate>
+            </MotionInputs>
+            <BladeProperties hubAxis="0.0,0.0,1.0" spanAxis="1.0,0.0,0.0">
+              <ChordF>/p/home/rhaehnel/cpe/mtrobin_hv10/melodi/inputs/Chord_s76blade-srf.dat</ChordF>
+              <TwistF>/p/home/rhaehnel/cpe/mtrobin_hv10/melodi/inputs/Twist_s76blade-srf.dat</TwistF>
+              <QCF>/p/home/rhaehnel/cpe/mtrobin_hv10/melodi/inputs/QC_s76blade-srf.dat</QCF>
+            </BladeProperties>
+          </Body>
+          <Body bodyType="Blade" def="s76blade-srf" name="mblade3" type="Mesh">
+            <FSIFrame>mblade3_MF</FSIFrame>
+            <DefineBodyFrame>Yes</DefineBodyFrame>
+            <MFDefineTransformFromFrame>MainRotor</MFDefineTransformFromFrame>
+            <BFDefineTransformFromFrame>mblade3</BFDefineTransformFromFrame>
+            <BFDefineTransformFromType>Mesh Frame</BFDefineTransformFromType>
+            <Body2GridsQuery>No</Body2GridsQuery>
+            <Body2GridsMap>1</Body2GridsMap>
+            <TransformList>
+              <CompoundTransform centerOfRotation="0,0,0" rotationAngle="{rotAngle}" rotationAxis="X" rotationAxisVector="1,0,0" type="Rotate" />
+              <CompoundTransform centerOfRotation="0,0,0" rotationAngle="180" rotationAxis="Z" rotationAxisVector="0,0,1" type="Rotate" />
+            </TransformList>
+            <MotionInputs changeFSIFrame="yes" enable="true" expressedin="child" type="None">
+              <DefType>None</DefType>
+              <CSDCoupling>None</CSDCoupling>
+              <CSDObject>None</CSDObject>
+              <RotationRate>0.0</RotationRate>
+              <RateUnit>rad/s</RateUnit>
+              <MotionAxis>0.0,0.0,1.0</MotionAxis>
+              <MotionCenter>0.0,0.0,0.0</MotionCenter>
+              <TranslationRate>0.0</TranslationRate>
+            </MotionInputs>
+            <BladeProperties hubAxis="0.0,0.0,1.0" spanAxis="1.0,0.0,0.0">
+              <ChordF>/p/home/rhaehnel/cpe/mtrobin_hv10/melodi/inputs/Chord_s76blade-srf.dat</ChordF>
+              <TwistF>/p/home/rhaehnel/cpe/mtrobin_hv10/melodi/inputs/Twist_s76blade-srf.dat</TwistF>
+              <QCF>/p/home/rhaehnel/cpe/mtrobin_hv10/melodi/inputs/QC_s76blade-srf.dat</QCF>
+            </BladeProperties>
+          </Body>
+          <Body bodyType="Blade" def="s76blade-srf" name="mblade4" type="Mesh">
+            <FSIFrame>mblade4_MF</FSIFrame>
+            <DefineBodyFrame>Yes</DefineBodyFrame>
+            <MFDefineTransformFromFrame>MainRotor</MFDefineTransformFromFrame>
+            <BFDefineTransformFromFrame>mblade4</BFDefineTransformFromFrame>
+            <BFDefineTransformFromType>Mesh Frame</BFDefineTransformFromType>
+            <Body2GridsQuery>No</Body2GridsQuery>
+            <Body2GridsMap>1</Body2GridsMap>
+            <TransformList>
+              <CompoundTransform centerOfRotation="0,0,0" rotationAngle="{rotAngle}" rotationAxis="X" rotationAxisVector="1,0,0" type="Rotate" />
+              <CompoundTransform centerOfRotation="0,0,0" rotationAngle="270" rotationAxis="Z" rotationAxisVector="0,0,1" type="Rotate" />
+            </TransformList>
+            <MotionInputs changeFSIFrame="yes" enable="true" expressedin="child" type="None">
+              <DefType>None</DefType>
+              <CSDCoupling>None</CSDCoupling>
+              <CSDObject>None</CSDObject>
+              <RotationRate>0.0</RotationRate>
+              <RateUnit>rad/s</RateUnit>
+              <MotionAxis>0.0,0.0,1.0</MotionAxis>
+              <MotionCenter>0.0,0.0,0.0</MotionCenter>
+              <TranslationRate>0.0</TranslationRate>
+            </MotionInputs>
+            <BladeProperties hubAxis="0.0,0.0,1.0" spanAxis="1.0,0.0,0.0">
+              <ChordF>/p/home/rhaehnel/cpe/mtrobin_hv10/melodi/inputs/Chord_s76blade-srf.dat</ChordF>
+              <TwistF>/p/home/rhaehnel/cpe/mtrobin_hv10/melodi/inputs/Twist_s76blade-srf.dat</TwistF>
+              <QCF>/p/home/rhaehnel/cpe/mtrobin_hv10/melodi/inputs/QC_s76blade-srf.dat</QCF>
+            </BladeProperties>
+          </Body>
+        </BodyList>
+      </Body>
+      <Body bodyType="Other" def="robin" name="Fuselage" type="Mesh">
+        <FSIFrame>Fuselage_MF</FSIFrame>
+        <DefineBodyFrame>Yes</DefineBodyFrame>
+        <MFDefineTransformFromFrame>CFDframe</MFDefineTransformFromFrame>
+        <BFDefineTransformFromFrame>Fuselage</BFDefineTransformFromFrame>
+        <BFDefineTransformFromType>Mesh Frame</BFDefineTransformFromType>
+        <Body2GridsQuery>No</Body2GridsQuery>
+        <Body2GridsMap>1</Body2GridsMap>
+        <MotionInputs changeFSIFrame="yes" enable="true" expressedin="child" type="None">
+          <DefType>None</DefType>
+          <CSDCoupling>None</CSDCoupling>
+          <CSDObject>None</CSDObject>
+          <RotationRate>0.0</RotationRate>
+          <RateUnit>rad/s</RateUnit>
+          <MotionAxis>0.0,0.0,1.0</MotionAxis>
+          <MotionCenter>0.0,0.0,0.0</MotionCenter>
+          <TranslationRate>0.0</TranslationRate>
+        </MotionInputs>
+        <BladeProperties hubAxis="0.0,0.0,1.0" spanAxis="1.0,0.0,0.0" />
+      </Body>
+      <Body def="Meshless" name="TailRotor" rotationDirection="ccw" type="Rotor">
+        <ReferenceRotor>No</ReferenceRotor>
+        <MFDefineTransformFromFrame>CFDframe</MFDefineTransformFromFrame>
+        <ReferenceArea>5.693365</ReferenceArea>
+        <RotorRadius>1.346200</RotorRadius>
+        <TransformList>
+          <CompoundTransform centerOfRotation="0,0,0" rotationAngle="-70" rotationAxis="X" rotationAxisVector="1,0,0" type="Rotate" />
+          <CompoundTransform translate="8.890000,0.762000,1.270000" type="Translate" />
+        </TransformList>
+        <MotionInputs enable="true" expressedin="child" type="One DOF Rotation - Rate">
+          <DefType>None</DefType>
+          <CSDCoupling>None</CSDCoupling>
+          <CSDObject>TailRotor</CSDObject>
+          <RotationRate>138.0</RotationRate>
+          <RateUnit>rad/s</RateUnit>
+          <MotionAxis>0,0,1</MotionAxis>
+          <MotionCenter>0.0,0.0,0.0</MotionCenter>
+          <TranslationRate>0.0</TranslationRate>
+        </MotionInputs>
+        <BodyList>
+          <Body bodyType="Blade" def="tail" name="tblade1" type="Mesh">
+            <FSIFrame>tblade1_MF</FSIFrame>
+            <DefineBodyFrame>Yes</DefineBodyFrame>
+            <MFDefineTransformFromFrame>TailRotor</MFDefineTransformFromFrame>
+            <BFDefineTransformFromFrame>tblade1</BFDefineTransformFromFrame>
+            <BFDefineTransformFromType>Mesh Frame</BFDefineTransformFromType>
+            <Body2GridsQuery>No</Body2GridsQuery>
+            <Body2GridsMap>1</Body2GridsMap>
+            <TransformList>
+              <CompoundTransform centerOfRotation="0,0,0" rotationAngle="7" rotationAxis="X" rotationAxisVector="1,0,0" type="Rotate" />
+            </TransformList>
+            <MotionInputs changeFSIFrame="yes" enable="true" expressedin="child" type="None">
+              <DefType>None</DefType>
+              <CSDCoupling>None</CSDCoupling>
+              <CSDObject>None</CSDObject>
+              <RotationRate>0.0</RotationRate>
+              <RateUnit>rad/s</RateUnit>
+              <MotionAxis>0.0,0.0,1.0</MotionAxis>
+              <MotionCenter>0.0,0.0,0.0</MotionCenter>
+              <TranslationRate>0.0</TranslationRate>
+            </MotionInputs>
+            <BladeProperties hubAxis="0.0,0.0,1.0" spanAxis="1.0,0.0,0.0">
+              <ChordF>/p/home/rhaehnel/cpe/mtrobin_hv10/melodi/inputs/Chord_tail.dat</ChordF>
+              <TwistF>/p/home/rhaehnel/cpe/mtrobin_hv10/melodi/inputs/Twist_tail.dat</TwistF>
+              <QCF>/p/home/rhaehnel/cpe/mtrobin_hv10/melodi/inputs/QC_tail.dat</QCF>
+            </BladeProperties>
+          </Body>
+          <Body bodyType="Blade" def="tail" name="tblade2" type="Mesh">
+            <FSIFrame>tblade2_MF</FSIFrame>
+            <DefineBodyFrame>Yes</DefineBodyFrame>
+            <MFDefineTransformFromFrame>TailRotor</MFDefineTransformFromFrame>
+            <BFDefineTransformFromFrame>tblade2</BFDefineTransformFromFrame>
+            <BFDefineTransformFromType>Mesh Frame</BFDefineTransformFromType>
+            <Body2GridsQuery>No</Body2GridsQuery>
+            <Body2GridsMap>1</Body2GridsMap>
+            <TransformList>
+              <CompoundTransform centerOfRotation="0,0,0" rotationAngle="7" rotationAxis="X" rotationAxisVector="1,0,0" type="Rotate" />
+              <CompoundTransform centerOfRotation="0,0,0" rotationAngle="90" rotationAxis="Z" rotationAxisVector="0,0,1" type="Rotate" />
+            </TransformList>
+            <MotionInputs changeFSIFrame="yes" enable="true" expressedin="child" type="None">
+              <DefType>None</DefType>
+              <CSDCoupling>None</CSDCoupling>
+              <CSDObject>None</CSDObject>
+              <RotationRate>0.0</RotationRate>
+              <RateUnit>rad/s</RateUnit>
+              <MotionAxis>0.0,0.0,1.0</MotionAxis>
+              <MotionCenter>0.0,0.0,0.0</MotionCenter>
+              <TranslationRate>0.0</TranslationRate>
+            </MotionInputs>
+            <BladeProperties hubAxis="0.0,0.0,1.0" spanAxis="1.0,0.0,0.0">
+              <ChordF>/p/home/rhaehnel/cpe/mtrobin_hv10/melodi/inputs/Chord_tail.dat</ChordF>
+              <TwistF>/p/home/rhaehnel/cpe/mtrobin_hv10/melodi/inputs/Twist_tail.dat</TwistF>
+              <QCF>/p/home/rhaehnel/cpe/mtrobin_hv10/melodi/inputs/QC_tail.dat</QCF>
+            </BladeProperties>
+          </Body>
+          <Body bodyType="Blade" def="tail" name="tblade3" type="Mesh">
+            <FSIFrame>tblade3_MF</FSIFrame>
+            <DefineBodyFrame>Yes</DefineBodyFrame>
+            <MFDefineTransformFromFrame>TailRotor</MFDefineTransformFromFrame>
+            <BFDefineTransformFromFrame>tblade3</BFDefineTransformFromFrame>
+            <BFDefineTransformFromType>Mesh Frame</BFDefineTransformFromType>
+            <Body2GridsQuery>No</Body2GridsQuery>
+            <Body2GridsMap>1</Body2GridsMap>
+            <TransformList>
+              <CompoundTransform centerOfRotation="0,0,0" rotationAngle="7" rotationAxis="X" rotationAxisVector="1,0,0" type="Rotate" />
+              <CompoundTransform centerOfRotation="0,0,0" rotationAngle="180" rotationAxis="Z" rotationAxisVector="0,0,1" type="Rotate" />
+            </TransformList>
+            <MotionInputs changeFSIFrame="yes" enable="true" expressedin="child" type="None">
+              <DefType>None</DefType>
+              <CSDCoupling>None</CSDCoupling>
+              <CSDObject>None</CSDObject>
+              <RotationRate>0.0</RotationRate>
+              <RateUnit>rad/s</RateUnit>
+              <MotionAxis>0.0,0.0,1.0</MotionAxis>
+              <MotionCenter>0.0,0.0,0.0</MotionCenter>
+              <TranslationRate>0.0</TranslationRate>
+            </MotionInputs>
+            <BladeProperties hubAxis="0.0,0.0,1.0" spanAxis="1.0,0.0,0.0">
+              <ChordF>/p/home/rhaehnel/cpe/mtrobin_hv10/melodi/inputs/Chord_tail.dat</ChordF>
+              <TwistF>/p/home/rhaehnel/cpe/mtrobin_hv10/melodi/inputs/Twist_tail.dat</TwistF>
+              <QCF>/p/home/rhaehnel/cpe/mtrobin_hv10/melodi/inputs/QC_tail.dat</QCF>
+            </BladeProperties>
+          </Body>
+          <Body bodyType="Blade" def="tail" name="tblade4" type="Mesh">
+            <FSIFrame>tblade4_MF</FSIFrame>
+            <DefineBodyFrame>Yes</DefineBodyFrame>
+            <MFDefineTransformFromFrame>TailRotor</MFDefineTransformFromFrame>
+            <BFDefineTransformFromFrame>tblade4</BFDefineTransformFromFrame>
+            <BFDefineTransformFromType>Mesh Frame</BFDefineTransformFromType>
+            <Body2GridsQuery>No</Body2GridsQuery>
+            <Body2GridsMap>1</Body2GridsMap>
+            <TransformList>
+              <CompoundTransform centerOfRotation="0,0,0" rotationAngle="7" rotationAxis="X" rotationAxisVector="1,0,0" type="Rotate" />
+              <CompoundTransform centerOfRotation="0,0,0" rotationAngle="270" rotationAxis="Z" rotationAxisVector="0,0,1" type="Rotate" />
+            </TransformList>
+            <MotionInputs changeFSIFrame="yes" enable="true" expressedin="child" type="None">
+              <DefType>None</DefType>
+              <CSDCoupling>None</CSDCoupling>
+              <CSDObject>None</CSDObject>
+              <RotationRate>0.0</RotationRate>
+              <RateUnit>rad/s</RateUnit>
+              <MotionAxis>0.0,0.0,1.0</MotionAxis>
+              <MotionCenter>0.0,0.0,0.0</MotionCenter>
+              <TranslationRate>0.0</TranslationRate>
+            </MotionInputs>
+            <BladeProperties hubAxis="0.0,0.0,1.0" spanAxis="1.0,0.0,0.0">
+              <ChordF>/p/home/rhaehnel/cpe/mtrobin_hv10/melodi/inputs/Chord_tail.dat</ChordF>
+              <TwistF>/p/home/rhaehnel/cpe/mtrobin_hv10/melodi/inputs/Twist_tail.dat</TwistF>
+              <QCF>/p/home/rhaehnel/cpe/mtrobin_hv10/melodi/inputs/QC_tail.dat</QCF>
+            </BladeProperties>
+          </Body>
+        </BodyList>
+      </Body>
+    </BodyList>
+  </BodyHierarchy>
+</JobInputs>

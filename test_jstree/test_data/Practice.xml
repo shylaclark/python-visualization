@@ -1,0 +1,27 @@
+<JobInputs featureSet="8.00">
+    <ComponentList>
+      <Component>SimulationControl</Component>
+      <Component>Reference</Component>
+      <Component>OutputControl</Component>
+      <Component>AdvancedSimulation</Component>
+      <Component>MeshManager</Component>
+      <Component>InputManager</Component>
+      <Component>MeshMove</Component>
+      <Component>MELODI</Component>
+      <Component>MoveSentinel</Component>
+      <Component>OSCAR</Component>
+      <Component>PUNDIT</Component>
+      <Component>SAMCart</Component>
+      <Component>MSTRAND</Component>
+      <Component>SolveSentinel</Component>
+      <Component>ForcesMomentsCalc</Component>
+      <Component>ExceptionManager</Component>
+      <Component>OutputManager</Component>
+      <Component>TrackFileWriter</Component>
+      <Component>COVIZ</Component>
+      <Component>CovizControl</Component>
+      <Component>OutputSentinel</Component>
+      <Component>ConvergeSol</Component>
+      <Component>TimeManager</Component>
+    </ComponentList>
+</JobInputs>
