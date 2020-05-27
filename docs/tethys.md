@@ -73,7 +73,7 @@ tethys scaffold dam_inventory
 
 #### Install the app on your development server
 ```
-cd ~/tethysdev/tethysapp-dam_inventory
+cd ~/tethysapp-dam_inventory
 tethys install -d
 ```
 
