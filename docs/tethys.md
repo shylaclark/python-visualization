@@ -37,13 +37,16 @@ Login
 
 When you start up a new terminal, there are three steps to get the Tethys development server running again:
 1. Activate the Tethys conda environment
-2. Start the Tethys database server
-3. Start the Tethys development server
-
-Using the supplied aliases, starting the Tethys development server from a fresh terminal can be done with the following two commands:
 ```
-$ t
-$ tstart
+t
+```
+2. Start the Tethys database server
+```
+tethys db start
+```
+3. Start the Tethys development server
+```
+tstart
 ```
 
 ## Important Paths
