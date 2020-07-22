@@ -10,3 +10,4 @@ See docs/ for installation and configuration instructions for:
 ## Resources
 - https://pyviz.org
 - https://holoviz.org
+- https://deeplearning.lipingyang.org/2018/12/24/install-miniconda-on-mac/
